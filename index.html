@@ -1,22 +1,64 @@
 <html>
 <head>
-	<title>카카오톡 가짜 기프티콘 선물하기</title>
-<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>카톡 공유</title>
+<script type="text/JavaScript" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
 <body>
-	<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요.</strong></p>
-<a id="kakao-link-btn" href="javascript:sendLink()">
-  <img
-    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
-  />
-</a>
+    <input type="button" onClick="sendLinkCustom();" value="Custom"/>
+    <input type="button" onClick="sendLinkDefault();" value="Default"/>
+
 <script type="text/javascript">
- Kakao.init('fecdac7424bc234b1c117ef40bfe6e28');
-  function sendLink() {
-    Kakao.Link.createCustomButton((container: '#kakao-link-btn', templateld: 71607,});
-  }
+    function sendLinkCustom() {
+        Kakao.init("");
+        Kakao.Link.sendCustom({
+            templateId: [templete id]
+        });
+    }
 </script>
-<!-- www.blackcats4567.com -->
-<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
-  </body>
+
+<script>
+try {
+  function sendLinkDefault() {
+    Kakao.init('fecdac7424bc234b1c117ef40bfe6e28')
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '딸기 치즈 케익',
+        description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+        imageUrl:
+          'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+        link: {
+          mobileWebUrl: 'https://developers.kakao.com',
+          webUrl: 'https://developers.kakao.com',
+        },
+      },
+      social: {
+        likeCount: 286,
+        commentCount: 45,
+        sharedCount: 845,
+      },
+      buttons: [
+        {
+          title: '웹으로 보기',
+          link: {
+            mobileWebUrl: 'https://developers.kakao.com',
+            webUrl: 'https://developers.kakao.com',
+          },
+        },
+        {
+          title: '앱으로 보기',
+          link: {
+            mobileWebUrl: 'https://developers.kakao.com',
+            webUrl: 'https://developers.kakao.com',
+          },
+      },
+      ],
+    })
+  }
+; window.kakaoDemoCallback && window.kakaoDemoCallback() }
+catch(e) { window.kakaoDemoException && window.kakaoDemoException(e) }
+</script>
+   
+</body>
 </html>
