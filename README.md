@@ -1,1 +1,1 @@
-# KakaoTalk_API [FAKE-GIFT]
+# Kakako Talk Send Fake Gift API
