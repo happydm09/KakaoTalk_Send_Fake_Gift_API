@@ -1,54 +1,19 @@
-<html>
-<head>
-	<title>카카오톡 가짜 기프티콘 선물하기</title>
-<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-</head>
-<body>
-	<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요.</strong></p>
-<a id="kakao-link-btn" href="javascript:sendLink()">
-  <img
-    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
-  />
-</a>
-<script type="text/javascript">
- Kakao.init('fecdac7424bc234b1c117ef40bfe6e28');
-  function sendLink() {
-    Kakao.Link.sendDefault({
-      objectType: 'feed',
-      content: {
-        title: '1,000원을 받으세요.',
-        description: '',
-        imageUrl:'https://mblogthumb-phinf.pstatic.net/MjAyMjAyMjdfNjcg/MDAxNjQ1OTQxNTcxMDAy.MLklakDXIMvHSd37fK9ZE3swr5Qw7KlcYTr3ZBZEoeIg.FrHIgWclbaxRtofQBFS7-cyhu1Asc5PZl9RIhWvBrY0g.JPEG.happydm09/1645941569720.jpg?type=w800',
-	      
-        link: {
-          mobileWebUrl: 'https://www.kakaocorp.com/page/404_Error/Message:_This_Gift_is_Fake!!___lol',
-          webUrl: 'https://www.kakaocorp.com/page/404_Error/Message:_This_Gift_is_Fake!!___lol',
-        },
-      },
-      buttons: [
-        {
-          title: '받기',
-          link: {
-            mobileWebUrl: 'https://www.kakaocorp.com/page/404_Error/Message:_This_Gift_is_Fake!!___lol',
-            webUrl: 'https://www.kakaocorp.com/page/404_Error/Message:_This_Gift_is_Fake!!___lol',
-          },
-         },
-      ],
+<!dochtml> 
+<html> 
+<title>모바일 청첩장 전송용 사이트</title> 
+<head> 
+             <meta charset="utf-8"/> 
+              <script src="https://developers.kakao.com,/sdk/js/kakao.js"> </script>
+ </head>
+ <body> 
+<h1>모바일 청첩장 전송하기<br> 
 
-buttons: [
-        {
-          title: '기',
-          link: {
-            mobileWebUrl: 'https://www.kakaocorp.com/page/404_Error/Message:_This_Gift_is_Fake!!___lol',
-            webUrl: 'https://www.kakaocorp.com/page/404_Error/Message:_This_Gift_is_Fake!!___lol',
-          },
-         },
-      ],
-
-    })
-  }
-</script>
-<!-- www.blackcats4567.com -->
-<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
-  </body>
-</html>
+<a id="kakao-link-btn"> 
+     <img src="//developers.kakao.com/assets/img/about/logos/kaolink/kakaolink_btn_medium.png"
+ </a> 전송버튼</h1>
+ <script type='text/javascript'> 
+            Kakao.init('fecdac7424bc234b1c117ef40bfe6e28');
+            Kakao.Link.createCustomButton((container: '#kakao-link-btn', templateld: 71607,}); 
+            </script> 
+</body>
+ </html>
